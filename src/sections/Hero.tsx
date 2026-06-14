@@ -41,7 +41,7 @@ export function Hero() {
               className="mt-6 text-lg text-ink-500 max-w-xl leading-relaxed"
             >
               Orqestra detects when enterprise AI systems built by different teams give 
-              mutually exclusive answers about the same organizational facts. 
+              mutually exclusive answers about the same organizational facts. <br />
               A failure no existing monitoring tool can see.
             </motion.p>
 
