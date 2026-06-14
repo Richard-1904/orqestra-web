@@ -7,12 +7,12 @@ const CAPABILITIES = [
     body: "Find where trusted sources disagree.",
   },
   {
-    title: "Truth Divergence Analysis",
-    body: "Understand how knowledge drifts over time.",
+    title: "Explainability Engine",
+    body: "Every contradiction ships fully diagnosed.",
   },
   {
-    title: "Knowledge Validation",
-    body: "Verify information against its source.",
+    title: "Staleness Identification",
+    body: "Understand which system carries outdated context.",
   },
   {
     title: "Risk Intelligence",
@@ -24,7 +24,7 @@ const CAPABILITIES = [
   },
   {
     title: "Resolution Support",
-    body: "Help teams resolve issues faster.",
+    body: "Recommends actions so engineers resolve incidents without manual investigation.",
   },
 ];
 

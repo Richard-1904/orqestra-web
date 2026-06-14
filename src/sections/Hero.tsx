@@ -22,7 +22,7 @@ export function Hero() {
               transition={{ duration: 0.6 }}
               className="section-eyebrow mb-6"
             >
-              Organizational Knowledge Confidence
+              Multi Agent AI Estate Coherence
             </motion.div>
 
             <motion.h1
@@ -31,7 +31,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="font-display text-display-md lg:text-display-lg font-semibold text-ink-100 tracking-tight"
             >
-              Know what your organization knows.
+              When AI systems disagree, your business pays the price.
             </motion.h1>
 
             <motion.p
@@ -40,10 +40,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-6 text-lg text-ink-500 max-w-xl leading-relaxed"
             >
-              Orqestra helps organizations understand,
-              validate, and maintain confidence in the
-              knowledge that drives decisions, operations,
-              compliance, and AI systems.
+              Orqestra detects when enterprise AI systems built by different teams give 
+              mutually exclusive answers about the same organizational facts. 
+              A failure no existing monitoring tool can see.
             </motion.p>
 
             <motion.div

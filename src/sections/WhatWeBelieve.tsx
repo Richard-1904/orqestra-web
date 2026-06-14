@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 const DRIFT_POINTS = [
-  "Policies evolve.",
-  "Procedures change.",
-  "Contracts get updated.",
-  "AI systems learn from snapshots.",
+  "Policies evolve",
+  "Procedures change",
+  "Contracts get updated",
+  "AI systems learn from snapshots",
   "Teams work in silos.",
-  "Truth diverges.",
+  "Systems disagree silently",
 ];
 
 export function WhatWeBelieve() {
@@ -18,9 +18,10 @@ export function WhatWeBelieve() {
           <h2 className="font-display text-display-sm lg:text-display-md font-semibold text-ink-100 tracking-tight">
             Knowledge doesn't fail all at once.
             <br />
-            <span className="text-ink-500 text-2xl lg:text-3xl">
-              It drifts.
-            </span>
+            <em>It drifts.</em>
+            <div className="text-ink-500 text-2xl lg:text-3xl">
+              No single system is broken, the failure lives in the space between them.
+            </div>
           </h2>
         </div>
 
