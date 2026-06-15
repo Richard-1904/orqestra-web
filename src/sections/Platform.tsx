@@ -9,10 +9,10 @@ export function Platform() {
         <div className="max-w-3xl mx-auto text-center mb-16 lg:mb-20">
           <div className="section-eyebrow mb-6">The Orqestra Platform</div>
           <h2 className="font-display text-display-sm lg:text-display-md font-semibold text-ink-100 tracking-tight mb-6">
-            A continuous view of organizational knowledge.
+            Your AI estate, finally coherent.
           </h2>
           <p className="text-ink-500 leading-relaxed text-lg lg:text-xl max-w-2xl mx-auto">
-            Orqestra connects the systems organizations already rely on and continuously analyzes how information relates, changes, and conflicts across them.
+            Orqestra connects across your entire stack, any framework, any model, and continuously compares what each system asserts about the same organizational facts. When they conflict, you see it here before anyone else does.
           </p>
         </div>
 
