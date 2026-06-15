@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ConfidenceMesh } from "../components/ConfidenceMesh";
+import { AIEstateGraph } from "../components/AIEstateGraph";
 
 export function Platform() {
   return (
@@ -16,15 +16,15 @@ export function Platform() {
           </p>
         </div>
 
-        {/* Visual Block (Network Graph) */}
+        {/* Visual Block (AI Estate Graph) */}
         <motion.div
           initial={{ opacity: 0, y: 24, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="relative aspect-[4/3] max-w-3xl mx-auto w-full border border-base-600/60 rounded-2xl overflow-hidden bg-base-950/20 p-6 md:p-10"
+          className="max-w-4xl mx-auto w-full"
         >
-          <ConfidenceMesh variant="hero" className="w-full h-full" />
+          <AIEstateGraph />
         </motion.div>
       </div>
     </section>
