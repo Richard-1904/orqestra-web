@@ -138,25 +138,6 @@ src/
 - Geist (Display)
 - Inter (Body)
 
-### Visual Language
-
-The **Confidence Mesh** serves as the core visual motif.
-
-Confidence is represented through:
-
-- Node density
-- Edge opacity
-- Edge thickness
-- Structured connectivity
-
-The motif is reused across:
-
-- Hero section
-- Platform section
-- Capability cards
-- Ambient backgrounds
-- Brand mark elements
-
 ## Domain
 
 Primary domain:
