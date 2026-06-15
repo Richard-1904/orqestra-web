@@ -125,14 +125,14 @@ export function AIEstateGraph() {
           />
 
           {/* Count badges */}
-          <circle cx="100" cy="240" r="10" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="100" y="244.5" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">2</text>
-          <circle cx="540" cy="240" r="10" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="540" y="244.5" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">1</text>
+          <circle cx="100" cy="240" r="7" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="100" y="243.2" textAnchor="middle" fontSize="9" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">2</text>
+          <circle cx="540" cy="240" r="7" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="540" y="243.2" textAnchor="middle" fontSize="9" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">1</text>
 
           {/* Conflict labels */}
-          <text x="100" y="263" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Refund window</text>
-          <text x="540" y="263" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Pricing tier</text>
+          <text x="112" y="243" textAnchor="start" fontSize="9" fontWeight="500" fill="#e43737" fontFamily="system-ui,sans-serif" opacity="0.85">Refund window</text>
+          <text x="574" y="243" textAnchor="middle" fontSize="9" fontWeight="500" fill="#e43737" fontFamily="system-ui,sans-serif" opacity="0.85">Pricing tier</text>
         </svg>
 
         {NODES.map((node) => (
