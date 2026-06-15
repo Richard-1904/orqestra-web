@@ -22,7 +22,7 @@ export function Platform() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto w-full"
+          className="max-w-6xl mx-auto w-full"
         >
           <AIEstateGraph />
         </motion.div>

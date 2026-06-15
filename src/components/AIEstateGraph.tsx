@@ -79,22 +79,22 @@ export function AIEstateGraph() {
 
       {/* Header */}
       <div
-        className="flex items-center justify-between px-4 sm:px-5 py-3 border-b flex-wrap gap-2"
+        className="flex items-center justify-between px-5 sm:px-6 py-4 border-b flex-wrap gap-2"
         style={{ background: colors.headerBg, borderColor: colors.panelBorder }}
       >
         <div>
-          <div className="text-[13px] font-medium" style={{ color: colors.textPrimary }}>
+          <div className="text-sm font-semibold sm:text-[15px]" style={{ color: colors.textPrimary }}>
             AI estate
           </div>
-          <div className="text-[11px] mt-0.5" style={{ color: colors.textMuted }}>
+          <div className="text-xs mt-0.5" style={{ color: colors.textMuted }}>
             6 systems connected · last scanned 4s ago
           </div>
         </div>
-        <div className="flex items-center gap-2 flex-wrap justify-end">
-          <span className="text-[11px] font-medium px-2.5 py-1 rounded-full" style={{ background: "#FAEEDA", color: "#854F0B" }}>
+        <div className="flex items-center gap-2.5 flex-wrap justify-end">
+          <span className="text-xs font-medium px-3 py-1.5 rounded-full" style={{ background: "#FAEEDA", color: "#854F0B" }}>
             Estate coherence: 77%
           </span>
-          <span className="text-[11px] font-medium px-2.5 py-1 rounded-full" style={{ background: "#FCEBEB", color: "#A32D2D" }}>
+          <span className="text-xs font-medium px-3 py-1.5 rounded-full" style={{ background: "#FCEBEB", color: "#A32D2D" }}>
             3 active contradictions
           </span>
         </div>
@@ -125,20 +125,20 @@ export function AIEstateGraph() {
           />
 
           {/* Count badges */}
-          <circle cx="100" cy="240" r="9" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="100" y="244" textAnchor="middle" fontSize="10" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">2</text>
-          <circle cx="540" cy="240" r="9" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="540" y="244" textAnchor="middle" fontSize="10" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">1</text>
+          <circle cx="100" cy="240" r="10" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="100" y="244.5" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">2</text>
+          <circle cx="540" cy="240" r="10" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="540" y="244.5" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif">1</text>
 
           {/* Conflict labels */}
-          <text x="100" y="261" textAnchor="middle" fontSize="10" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Refund window</text>
-          <text x="540" y="261" textAnchor="middle" fontSize="10" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Pricing tier</text>
+          <text x="100" y="263" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Refund window</text>
+          <text x="540" y="263" textAnchor="middle" fontSize="11" fontWeight="500" fill="#A32D2D" fontFamily="system-ui,sans-serif" opacity="0.85">Pricing tier</text>
         </svg>
 
         {NODES.map((node) => (
           <div
             key={node.name}
-            className={`absolute rounded-lg px-3 py-2.5 ${node.status === "bad" ? "orq-node-bad" : ""}`}
+            className={`absolute rounded-xl px-4 py-3.5 ${node.status === "bad" ? "orq-node-bad" : ""}`}
             style={{
               left: `${(node.left / 640) * 100}%`,
               top: `${(node.top / 380) * 100}%`,
@@ -148,7 +148,7 @@ export function AIEstateGraph() {
             }}
           >
             <div className="flex items-start justify-between mb-1.5">
-              <span className="text-[11px] font-medium leading-tight" style={{ color: colors.textPrimary }}>
+              <span className="text-xs font-semibold sm:text-[13px] leading-tight" style={{ color: colors.textPrimary }}>
                 {node.name}
               </span>
               <span
@@ -156,10 +156,10 @@ export function AIEstateGraph() {
                 style={{ background: statusDot[node.status] }}
               />
             </div>
-            <div className="text-[22px] font-medium leading-none" style={{ color: statusScore[node.status] }}>
-              {node.score}<span className="text-[13px]">%</span>
+            <div className="text-2xl sm:text-[26px] font-semibold leading-none" style={{ color: statusScore[node.status] }}>
+              {node.score}<span className="text-[14px]">%</span>
             </div>
-            <div className="text-[10px] mt-0.5" style={{ color: colors.textMuted }}>
+            <div className="text-xs mt-0.5" style={{ color: colors.textMuted }}>
               coherence
             </div>
           </div>
@@ -168,7 +168,7 @@ export function AIEstateGraph() {
 
       {/* Footer / legend */}
       <div
-        className="flex items-center gap-5 flex-wrap px-4 py-2.5 border-t"
+        className="flex items-center gap-6 flex-wrap px-5 py-3.5 border-t"
         style={{ background: colors.headerBg, borderColor: colors.panelBorder }}
       >
         <Legend color={colors.textMuted}>
@@ -202,7 +202,7 @@ export function AIEstateGraph() {
 
 function Legend({ children, color }: { children: React.ReactNode; color: string }) {
   return (
-    <div className="flex items-center gap-1.5 text-[11px] flex-nowrap" style={{ color }}>
+    <div className="flex items-center gap-1.5 text-xs sm:text-[13px] flex-nowrap" style={{ color }}>
       {children}
     </div>
   );
