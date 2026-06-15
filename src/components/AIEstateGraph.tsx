@@ -114,12 +114,12 @@ export function AIEstateGraph() {
 
           {/* Animated contradiction edges */}
           <line
-            x1="100" y1="200" x2="100" y2="280"
+            x1="100" y1="170" x2="100" y2="280"
             stroke="#E24B4A" strokeWidth="1.5" strokeDasharray="5 3"
             className="orq-edge-flow"
           />
           <line
-            x1="540" y1="200" x2="540" y2="280"
+            x1="540" y1="170" x2="540" y2="280"
             stroke="#E24B4A" strokeWidth="1.5" strokeDasharray="5 3"
             className="orq-edge-flow"
           />
