@@ -1,37 +1,166 @@
 # Orqestra — Marketing Site
 
-## Setup
+The public-facing marketing and waitlist site for Orqestra.
+
+Built with React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Supabase.
+
+---
+
+## Local Development
+
+Install dependencies:
+
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build to dist/
 ```
 
-## Structure
+Start the development server:
+
+```bash
+npm run dev
 ```
+
+Available at:
+
+```text
+http://localhost:5173
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Output is generated in:
+
+```text
+dist/
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+VITE_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
+```
+
+These variables are used by the Early Access form to submit waitlist requests directly to Supabase.
+
+---
+
+## Supabase Setup
+
+### Waitlist Table
+
+Create the following table:
+
+```sql
+create table waitlist (
+  id bigint generated always as identity primary key,
+  created_at timestamptz default now(),
+  name text not null,
+  email text not null,
+  organization text not null,
+  role text not null,
+  industry text not null
+);
+```
+
+### Row Level Security
+
+Enable RLS on the table.
+
+Create an insert policy:
+
+```sql
+create policy "allow_public_waitlist_insert"
+on waitlist
+for insert
+to anon
+with check (true);
+```
+
+This allows visitors to submit waitlist requests from the public website.
+
+---
+
+## Project Structure
+
+```text
 src/
-  components/
-    ConfidenceMesh.tsx        — signature network visual (hero, platform, ambient)
-    ConfidenceIndicator.tsx    — small confidence dial used across cards
-    Navbar.tsx
-    Footer.tsx
-  sections/
-    Hero.tsx
-    WhatWeBelieve.tsx
-    Platform.tsx               — "The Orqestra Platform"
-    CoreCapabilities.tsx        — 7 capability cards
-    Applications.tsx            — applications section
-    EarlyAccess.tsx              — signup form
-  App.tsx
-  index.css                      — design tokens, base styles, focus states
+├── components/
+│   ├── AIEstateGraph.tsx
+│   ├── ConfidenceIndicator.tsx
+│   ├── ConfidenceMesh.tsx
+│   ├── Footer.tsx
+│   └── Navbar.tsx
+│
+├── lib/
+│   ├── supabase.ts
+│   └── useTheme.tsx
+│
+├── sections/
+│   ├── Applications.tsx
+│   ├── CoreCapabilities.tsx
+│   ├── EarlyAccess.tsx
+│   ├── Hero.tsx
+│   ├── Platform.tsx
+│   └── WhatWeBelieve.tsx
+│
+├── App.tsx
+├── main.tsx
+└── index.css
 ```
+
+---
 
 ## Design System
-- Colors: deep navy (#0A0E14 / #10151F) with a single teal accent (#5EEAD4)
-- Type: Geist (display) + Inter (body)
-- Signature element: the **Confidence Mesh** — a node/edge network where
-  line weight and opacity encode confidence, reused at every scale
-  (hero, platform section, ambient background, capability glyphs,
-  navbar/footer logomark).
-- Animation: Framer Motion, scroll-triggered reveals only — no looping or
-  decorative animation. Respects `prefers-reduced-motion`.
+
+### Colors
+
+- Deep Navy: `#0A0E14`
+- Surface Navy: `#10151F`
+- Signal Teal: `#5EEAD4`
+
+### Typography
+
+- Geist (Display)
+- Inter (Body)
+
+### Visual Language
+
+The **Confidence Mesh** serves as the core visual motif.
+
+Confidence is represented through:
+
+- Node density
+- Edge opacity
+- Edge thickness
+- Structured connectivity
+
+The motif is reused across:
+
+- Hero section
+- Platform section
+- Capability cards
+- Ambient backgrounds
+- Brand mark elements
+
+## Domain
+
+Primary domain:
+
+```text
+orqestrahq.com
+```
