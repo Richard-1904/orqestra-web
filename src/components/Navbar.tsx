@@ -59,7 +59,7 @@ export function Navbar() {
             href="#early-access"
             className="inline-flex items-center rounded-full ..."
           >
-            Request Early Access
+            Early Access
           </a>
         </div>
 

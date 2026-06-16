@@ -55,7 +55,7 @@ export function Hero() {
                 href="#early-access"
                 className="inline-flex items-center justify-center rounded-full bg-signal text-base-900 px-7 py-3.5 text-sm font-semibold hover:bg-signal-dim transition-colors"
               >
-                Request Early Access
+                Get Early Access
               </a>
               <a
                 href="#platform"

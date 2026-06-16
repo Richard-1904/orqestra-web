@@ -112,7 +112,7 @@ export function EarlyAccess() {
             <p className="text-ink-500 leading-relaxed text-lg">
               We're working closely with a small group of
               organizations to shape Orqestra's platform.
-              Request early access to learn more and join
+              Get early access to learn more and join
               the conversation.
             </p>
           </div>
@@ -189,7 +189,7 @@ export function EarlyAccess() {
                 >
                   {isSubmitting
                     ? "Submitting..."
-                    : "Request Early Access"}
+                    : "Get Early Access"}
                 </button>
               </form>
             )}
