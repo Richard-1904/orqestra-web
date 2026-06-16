@@ -109,11 +109,11 @@ export function AIEstateGraph() {
     MOBILE VIEW (< md) — pure SVG graph
     Everything inside SVG so it scales perfectly.
     ══════════════════════════════════════════════ */}
-      <div className="md:hidden w-full" style={{ aspectRatio: "640 / 500" }}>
+      <div className="md:hidden w-full py-4">
         <svg
           width="100%"
-          height="100%"
-          viewBox="0 0 640 500"
+          height="360"
+          viewBox="0 0 640 380"
           preserveAspectRatio="xMidYMid meet"
         >
           {/* ── Neutral edges ── */}
@@ -126,34 +126,34 @@ export function AIEstateGraph() {
           <line x1="490" y1="350" x2="370" y2="290" stroke={colors.edgeNeutral} strokeWidth="1" />
 
           {/* ── Animated contradiction edges ── */}
-          <line x1="100" y1="150" x2="100" y2="355"
+          <line x1="100" y1="130" x2="100" y2="315"
             stroke="#E24B4A" strokeWidth="2" strokeDasharray="6 4"
             className="orq-edge-flow" />
-          <line x1="540" y1="150" x2="540" y2="355"
+          <line x1="540" y1="130" x2="540" y2="315"
             stroke="#E24B4A" strokeWidth="2" strokeDasharray="6 4"
             className="orq-edge-flow" />
 
           {/* ── Contradiction badges ── */}
-          <circle cx="100" cy="250" r="12" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="100" y="254" textAnchor="middle" fontSize="12" fontWeight="600"
+          <circle cx="100" cy="230" r="12" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="100" y="234" textAnchor="middle" fontSize="12" fontWeight="600"
             fill="#A32D2D" fontFamily="system-ui,sans-serif">2</text>
-          <text x="118" y="254" textAnchor="start" fontSize="12" fontWeight="500"
+          <text x="118" y="234" textAnchor="start" fontSize="12" fontWeight="500"
             fill="#E24B4A" fontFamily="system-ui,sans-serif">Refund window</text>
 
-          <circle cx="540" cy="250" r="12" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
-          <text x="540" y="254" textAnchor="middle" fontSize="12" fontWeight="600"
+          <circle cx="540" cy="230" r="12" fill="#FCEBEB" stroke="#F09595" strokeWidth="0.5" />
+          <text x="540" y="234" textAnchor="middle" fontSize="12" fontWeight="600"
             fill="#A32D2D" fontFamily="system-ui,sans-serif">1</text>
-          <text x="558" y="254" textAnchor="start" fontSize="12" fontWeight="500"
+          <text x="522" y="234" textAnchor="end" fontSize="12" fontWeight="500"
             fill="#E24B4A" fontFamily="system-ui,sans-serif">Pricing tier</text>
 
           {/* ── Nodes (SVG-native, no HTML overlay) ── */}
           {[
-            { name: "HR Assistant", score: 94, status: "ok" as const, cx: 320, cy: 50 },
-            { name: "Support Bot", score: 72, status: "bad" as const, cx: 100, cy: 150 },
-            { name: "Pricing API", score: 68, status: "bad" as const, cx: 540, cy: 150 },
-            { name: "Compliance Agent", score: 81, status: "warn" as const, cx: 320, cy: 250 },
-            { name: "Contract Tool", score: 65, status: "bad" as const, cx: 100, cy: 350 },
-            { name: "Sales Agent", score: 61, status: "bad" as const, cx: 540, cy: 350 },
+            { name: "HR Assistant", score: 94, status: "ok" as const, cx: 320, cy: 40 },
+            { name: "Support Bot", score: 72, status: "bad" as const, cx: 100, cy: 130 },
+            { name: "Pricing API", score: 68, status: "bad" as const, cx: 540, cy: 130 },
+            { name: "Compliance Agent", score: 81, status: "warn" as const, cx: 320, cy: 220 },
+            { name: "Contract Tool", score: 65, status: "bad" as const, cx: 100, cy: 310 },
+            { name: "Sales Agent", score: 61, status: "bad" as const, cx: 540, cy: 310 },
           ].map((n) => {
             const W = 155, H = 80, rx = 10;
             const x = n.cx - W / 2;
