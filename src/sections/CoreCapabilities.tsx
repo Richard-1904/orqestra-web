@@ -30,7 +30,7 @@ const CAPABILITIES = [
 
 export function CoreCapabilities() {
   return (
-    <section className="py-24 lg:py-36 border-t border-base-600/60">
+    <section id="capabilities" className="py-24 lg:py-36 border-t border-base-600/60">
       <div className="max-w-content mx-auto container-px">
         <div className="max-w-2xl mb-16 lg:mb-20">
           <div className="section-eyebrow mb-6">Core Capabilities</div>
