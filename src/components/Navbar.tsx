@@ -3,7 +3,9 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "../lib/useTheme";
 
 const NAV_LINKS = [
+  { label: "The Problem", href: "#the-problem" },
   { label: "Platform", href: "#platform" },
+  { label: "Capabilities", href: "#capabilities" },
   { label: "Applications", href: "#applications" },
 ];
 

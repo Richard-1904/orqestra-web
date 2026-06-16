@@ -1,7 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { Hero } from "./sections/Hero";
-import { WhatWeBelieve } from "./sections/WhatWeBelieve";
+import { Problem } from "./sections/Problem";
 import { Platform } from "./sections/Platform";
 import { CoreCapabilities } from "./sections/CoreCapabilities";
 import { Applications } from "./sections/Applications";
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <WhatWeBelieve />
+        <Problem />
         <Platform />
         <CoreCapabilities />
         <Applications />

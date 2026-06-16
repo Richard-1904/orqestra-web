@@ -9,12 +9,12 @@ const DRIFT_POINTS = [
   "Systems disagree silently",
 ];
 
-export function WhatWeBelieve() {
+export function Problem() {
   return (
-    <section className="py-24 lg:py-36 border-t border-base-600/60">
+    <section id="the-problem" className="py-24 lg:py-36 border-t border-base-600/60">
       <div className="max-w-content mx-auto container-px">
         <div className="max-w-2xl mb-16 lg:mb-24">
-          <div className="section-eyebrow mb-6">What We Believe</div>
+          <div className="section-eyebrow mb-6">The Problem</div>
           <h2 className="font-display text-display-sm lg:text-display-md font-semibold text-ink-100 tracking-tight">
             Knowledge doesn't fail all at once.
             <br />
