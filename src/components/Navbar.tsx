@@ -5,7 +5,6 @@ import { useTheme } from "../lib/useTheme";
 const NAV_LINKS = [
   { label: "Platform", href: "#platform" },
   { label: "Applications", href: "#applications" },
-  { label: "About", href: "#about" },
 ];
 
 export function Navbar() {
